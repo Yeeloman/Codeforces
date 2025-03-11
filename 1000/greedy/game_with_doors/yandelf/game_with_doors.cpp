@@ -18,8 +18,6 @@ int main()
 {
     int nb_loops;
     int la, ra, lb, rb;
-    std::vector<std::vector<int>> v;
-    std::vector<int> inpt_v;
     std::vector<int> res;
     std::cin>>nb_loops;
 
@@ -27,15 +25,7 @@ int main()
     {
         std::cin>>la>>ra;
         std::cin>>lb>>rb;
-        inpt_v.push_back(la);
-        inpt_v.push_back(ra);
-        inpt_v.push_back(lb);
-        inpt_v.push_back(rb);
-        v.push_back(inpt_v);
-        inpt_v.clear();
-    }
-    for (auto i : v){
-        res.push_back(gwd_process(i[0], i[1], i[2], i[3])); 
+        res.push_back(gwd_process(la, ra, lb, rb));
     }
     for (auto i : res){
         std::cout<<i<<"\n";
